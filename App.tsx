@@ -21,7 +21,7 @@ const READING_TIME = 6000;
 
 // Reliable Royalty-Free Classical Waltz (Tchaikovsky - Waltz of the Flowers)
 // Hosted on Archive.org which provides direct MP3 access suitable for all browsers
-const MUSIC_URL = "Sofia the First Theme Song  @disneyjr.mp3";
+const MUSIC_URL = "audio.mp3";
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
