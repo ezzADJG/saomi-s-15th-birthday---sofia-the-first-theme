@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saomi 15 Años - Invitación Mágica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      /* Custom 3D Book Styles that are hard to do with just Tailwind utilities */
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #1a0b2e; /* Dark purple background for the room */
+      }
+
+      .perspective-2000 {
+        perspective: 2000px;
+      }
+
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+
+      .rotate-y-180 {
+        transform: rotateY(-180deg);
+      }
+      
+      .book-shadow {
+        box-shadow: 
+          inset 4px 0 10px rgba(0,0,0,0.1),
+          inset -1px 0 2px rgba(0,0,0,0.1),
+          10px 20px 30px rgba(0,0,0,0.4);
+      }
+
+      /* Page Turn Animation Duration */
+      .page-transition {
+        transition: transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      /* Sparkling stars animation */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      
+      .animate-twinkle {
+        animation: twinkle 3s infinite ease-in-out;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .animate-float {
+        animation: float 6s infinite ease-in-out;
+      }
+      
+      /* Scrollbar hide */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      
+      /* Text glows */
+      .text-glow-gold {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+      }
+      .text-glow-purple {
+        text-shadow: 0 0 10px rgba(107, 70, 193, 0.3);
+      }
+      .text-shadow-sm {
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
